@@ -27,15 +27,15 @@ assets/favicon.svg  工作室图标
 
 ## 发布
 
-仓库准备使用 Cloudflare Pages 从 GitHub 自动部署。首次连接需要站点所有者本人登录 Cloudflare / GitHub，并在页面授权 Cloudflare 访问这个仓库。部署设置：
+本仓库已连接到 Cloudflare Pages GitHub 集成，项目名为 `muguang-studio`，生产分支为 `main`。Cloudflare 使用仓库根目录中的静态文件发布，不需要前端框架、依赖安装或 ZIP 手动上传。部署设置：
 
 - Framework preset：None
 - Build command：留空
-- Build output directory：`.`（项目根目录）
+- Build output directory：`.`（项目根目录，包含 `index.html`、`style.css`、`script.js` 和 `assets/`）
 - Production branch：`main`
 
-成功部署后，Cloudflare 会显示以 `pages.dev` 结尾的网站地址。此站是对外展示商业服务的页面，因此不使用 GitHub Pages；GitHub 官方说明 Pages 不允许作为运行线上业务的网站托管服务。
+正式网址：[https://muguang-studio.pages.dev](https://muguang-studio.pages.dev)。对 `main` 的每次推送都会触发 Cloudflare 自动构建和发布。
 
 ## 后续修改
 
-编辑 `index.html`、`style.css` 或 `script.js` 后，提交并推送到 GitHub 的 `main` 分支。连接完成后，Cloudflare Pages 会自动构建并发布新版本。
+编辑 `index.html`、`style.css`、`script.js` 或 `assets/` 后，提交并推送到 GitHub 的 `main` 分支，Cloudflare Pages 会自动构建并发布新版本，无需再手动上传 ZIP。README 的后续提交也会触发部署，但不会改变访客看到的页面。
