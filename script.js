@@ -45,16 +45,17 @@
     sections.forEach((section) => observer.observe(section));
   }
 
-  const copyButton = document.querySelector("[data-copy-qq]");
   const copyStatus = document.querySelector("#copy-status");
-  copyButton?.addEventListener("click", async () => {
-    const qq = copyButton.dataset.copyQq;
+  document.querySelectorAll("[data-copy-contact]").forEach((copyButton) => {
+    copyButton.addEventListener("click", async () => {
+    const value = copyButton.dataset.copyContact;
+    const label = copyButton.dataset.copyLabel || "联系方式";
     try {
-      await navigator.clipboard.writeText(qq);
-      if (copyStatus) copyStatus.textContent = "QQ 号已复制，可以粘贴到 QQ 搜索。";
+      await navigator.clipboard.writeText(value);
+      if (copyStatus) copyStatus.textContent = `${label}已复制。`;
     } catch {
       const temporary = document.createElement("textarea");
-      temporary.value = qq;
+      temporary.value = value;
       temporary.setAttribute("readonly", "");
       temporary.style.position = "fixed";
       temporary.style.opacity = "0";
@@ -63,11 +64,12 @@
       const copied = document.execCommand("copy");
       temporary.remove();
       if (copyStatus) copyStatus.textContent = copied
-        ? "QQ 号已复制，可以粘贴到 QQ 搜索。"
-        : `QQ 号：${qq}`;
+        ? `${label}已复制。`
+        : `${label}：${value}`;
     }
     window.setTimeout(() => {
       if (copyStatus) copyStatus.textContent = "";
     }, 4500);
+    });
   });
 })();
