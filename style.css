@@ -211,6 +211,11 @@ h1, h2, h3, p { margin-top: 0; }
 .service-detail li b { color: #33466d; }
 .service-detail .service-material { margin: 14px 0 0; padding: 12px 14px; color: #526584; background: #f1f6ff; border: 1px solid #e2ebfa; border-radius: 12px; font-size: 13px; }
 .service-detail .service-boundary { padding: 12px 14px; font-size: 13px !important; line-height: 1.8; }
+.service-custom-detail { grid-column: 1 / -1; padding-bottom: 44px; }
+.service-custom-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.service-custom-item { padding: 15px 16px; border: 1px solid #edf1f9; border-radius: 14px; background: #fbfcff; }
+.service-custom-item h4 { margin: 0 0 5px; color: #33466d; font-size: 15px; }
+.service-detail .service-custom-item p { margin: 0; color: #72819d; font-size: 13px; line-height: 1.7; }
 .service-boundary-note { display: flex; gap: 12px; align-items: flex-start; margin-top: 18px; padding: 16px 18px; border: 1px solid #f0dfbf; border-radius: 16px; color: #70572c; background: #fffaf0; font-size: 14px; line-height: 1.8; }
 .service-boundary-note b { flex: 0 0 auto; color: #855c16; }
 .assurance-card h3 { font-size: 16px; }
@@ -247,6 +252,7 @@ h1, h2, h3, p { margin-top: 0; }
 
 @media (max-width: 980px) {
   .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-custom-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .assurance-card { min-height: 135px; }
 }
 @media (max-width: 720px) {
@@ -257,6 +263,8 @@ h1, h2, h3, p { margin-top: 0; }
   .section-heading p { font-size: 14px; }
   .service-grid { grid-template-columns: 1fr; gap: 13px; }
   .service-detail { padding: 20px; }
+  .service-custom-detail { grid-column: auto; }
+  .service-custom-grid { grid-template-columns: 1fr; gap: 9px; }
   .service-detail h3 { min-height: 0; font-size: 18px; }
   .service-detail p { font-size: 14px; }
   .service-detail ul { font-size: 13px; }
