@@ -233,6 +233,11 @@ h1, h2, h3, p { margin-top: 0; }
 .contact-guide div { display: grid; grid-template-columns: 108px 1fr; gap: 10px; padding-bottom: 10px; border-bottom: 1px solid rgba(112,130,171,.17); }
 .contact-guide b { color: #34466d; font-size: 14px; }
 .contact-guide span { color: #60718f; font-size: 13px; line-height: 1.8; }
+.contact-response { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0 12px; }
+.contact-response div { display: flex; flex-direction: column; gap: 4px; min-height: 76px; padding: 12px 14px; border: 1px solid rgba(226,234,248,.9); border-radius: 14px; background: rgba(255,255,255,.76); }
+.contact-response span { color: #7786a2; font-size: 13px; }
+.contact-response b { color: #31456f; font-size: 17px; }
+.contact-prompt { margin: 16px 0 10px !important; padding: 13px 15px; border-left: 3px solid #8587f4; border-radius: 0 12px 12px 0; color: #596b8b !important; background: rgba(255,255,255,.62); font-size: 13px !important; line-height: 1.85 !important; }
 .contact-option b { font-size: 13px; }
 .contact-option small { max-width: 160px; font-size: 12px; }
 .copy-qq { font-size: 12px; }
@@ -268,6 +273,11 @@ h1, h2, h3, p { margin-top: 0; }
   .contact-guide div { grid-template-columns: 1fr; gap: 3px; }
   .contact-guide b { font-size: 14px; }
   .contact-guide span { font-size: 13px; }
+  .contact-response { gap: 8px; }
+  .contact-response div { min-height: 72px; padding: 10px; }
+  .contact-response span { font-size: 12px; }
+  .contact-response b { font-size: 15px; }
+  .contact-prompt { font-size: 13px !important; }
   .contact-options { display: flex; flex-direction: column; }
   .contact-option { width: min(100%, 360px); min-height: 58px; }
   .footer-inner p { font-size: 12px; }
